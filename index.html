@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <video src="http://locashost:3000/video" autoplay poster="posterimage.jpg">
+
+    </video> -->
+    <img id="img" width="800" height="400">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    	var img = document.getElementById('img'),
+    		socket = io('http://hanh211.github.io/ha27/');
+    	socket.on('data', function(data) {
+    		img.src = 'data:image/jpeg;base64,' + data;
+    	});
+    </script>
+  </body>
+</html>
